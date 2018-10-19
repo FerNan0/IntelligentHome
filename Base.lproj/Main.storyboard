@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egl-r0-DA7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intelligent Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Intelligent Home" id="BYZ-38-t0r" customClass="ViewController" customModule="IntelligentHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkA-Sj-0wp">
+                                <rect key="frame" x="187" y="286" width="51" height="31"/>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-mP-ZG5">
+                                <rect key="frame" x="139" y="286" width="29" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="HxJ-Nu-C4L"/>
+                                    <constraint firstAttribute="height" constant="31" id="dlX-LO-OfH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fkA-Sj-0wp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="24" id="41C-eH-For"/>
+                            <constraint firstItem="2cp-mP-ZG5" firstAttribute="top" secondItem="fkA-Sj-0wp" secondAttribute="top" id="ClS-2M-u58"/>
+                            <constraint firstItem="fkA-Sj-0wp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="i4d-KC-BKB"/>
+                            <constraint firstItem="fkA-Sj-0wp" firstAttribute="leading" secondItem="2cp-mP-ZG5" secondAttribute="trailing" constant="19" id="wEn-Pu-T3e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Intelligent Home" id="LFj-lx-es5"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="imgViewLamp" destination="2cp-mP-ZG5" id="dSM-C2-6jz"/>
+                        <outlet property="switchLuz" destination="fkA-Sj-0wp" id="Crp-zB-6vR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="54"/>
+        </scene>
+        <!--Intelligent Home-->
+        <scene sceneID="R3C-L0-GeH">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PXG-sL-JtJ" customClass="MainViewController" customModule="IntelligentHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8SB-F8-iSA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7j4-2K-e5M">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="OUI-Kc-AkA" customClass="CustomCell" customModule="IntelligentHome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OUI-Kc-AkA" id="k3p-ku-oha">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONJ-Fq-RZn">
+                                                    <rect key="frame" x="15" y="19" width="345" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ONJ-Fq-RZn" secondAttribute="bottom" constant="8" id="O8M-lq-WiL"/>
+                                                <constraint firstItem="ONJ-Fq-RZn" firstAttribute="top" secondItem="k3p-ku-oha" secondAttribute="topMargin" constant="8" id="Vgi-c9-VhU"/>
+                                                <constraint firstItem="ONJ-Fq-RZn" firstAttribute="trailing" secondItem="k3p-ku-oha" secondAttribute="trailingMargin" id="i3Y-d0-LoV"/>
+                                                <constraint firstItem="ONJ-Fq-RZn" firstAttribute="leading" secondItem="k3p-ku-oha" secondAttribute="leadingMargin" id="vKf-kc-uZi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="ONJ-Fq-RZn" id="6jq-YU-YTH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sXp-22-9fO" firstAttribute="top" secondItem="7j4-2K-e5M" secondAttribute="top" id="1Wu-Be-aXT"/>
+                            <constraint firstItem="7j4-2K-e5M" firstAttribute="leading" secondItem="sXp-22-9fO" secondAttribute="leading" id="Lt3-cc-k7m"/>
+                            <constraint firstItem="sXp-22-9fO" firstAttribute="trailing" secondItem="7j4-2K-e5M" secondAttribute="trailing" id="R1N-wU-1bc"/>
+                            <constraint firstItem="sXp-22-9fO" firstAttribute="bottom" secondItem="7j4-2K-e5M" secondAttribute="bottom" id="zLP-BE-iEa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sXp-22-9fO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Intelligent Home" id="CNK-XF-XND"/>
+                    <connections>
+                        <outlet property="tbvMenu" destination="7j4-2K-e5M" id="jmw-vv-LwI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue_comodo" id="eRY-3f-gWd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIb-Kv-vn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074.4000000000001" y="53.523238380809602"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2fW-im-VNu">
+            <objects>
+                <navigationController id="egl-r0-DA7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jRK-ef-zlJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PXG-sL-JtJ" kind="relationship" relationship="rootViewController" id="XZG-J9-xNn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqT-5d-HFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2001" y="54"/>
+        </scene>
+    </scenes>
+</document>
